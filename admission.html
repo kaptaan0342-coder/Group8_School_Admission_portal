@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admission | Lahore Grammar School</title>
+    
+    <!-- Linking the external CSS file for the Admission page -->
+    <link rel="stylesheet" href="admission-style.css">
+</head>
+<body>
+    <!-- 
+        NAVIGATION BAR 
+    -->
+    <nav>
+        <div class="logo">
+            <img src="lgs-blue.jpg" alt="LGS Logo">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="admission.html">Admission</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="scholarship.html">Scholarship</a></li>
+            <li><a href="photogallery.html">Photo Gallery</a></li>
+        </ul>
+    </nav>
+
+    <!-- 
+        HERO SECTION 
+    -->
+    <section class="admission-hero">
+        <div class="overlay">
+            <h1>Admissions are Open Now!</h1>
+            <p>Join the legacy of excellence</p>
+        </div>
+    </section>
+
+    <!-- 
+        ADMISSION FORM SECTION 
+        This section contains a comprehensive form for student registration.
+    -->
+    <main>
+        <section class="admission-form-section">
+            <h1>Admission Form</h1>
+            <form action="#" method="POST">
+                <!-- Name Row: First and Last Name -->
+                <div class="form-row">
+                    <div class="form-col">
+                        <label for="first_name">First Name <span>*</span></label>
+                        <input type="text" id="first_name" name="first_name" required>
+                    </div>
+                    <div class="form-col">
+                        <label for="last_name">Last Name <span>*</span></label>
+                        <input type="text" id="last_name" name="last_name" required>
+                    </div>
+                </div>
+
+                <!-- Parent Row: Father and Mother Name -->
+                <div class="form-row">
+                    <div class="form-col">
+                        <label for="father_name">Father's Name <span>*</span></label>
+                        <input type="text" id="father_name" name="father_name" required>
+                    </div>
+                    <div class="form-col">
+                        <label for="mother_name">Mother's Name <span>*</span></label>
+                        <input type="text" id="mother_name" name="mother_name" required>
+                    </div>
+                </div>
+
+                <!-- CNIC + DOB Row -->
+                <div class="form-row">
+                    <div class="form-col">
+                        <label for="cnic">CNIC / B-Form <span>*</span></label>
+                        <input type="text" id="cnic" name="cnic" placeholder="xxxxx-xxxxxxx-x" required>
+                    </div>
+                    <div class="form-col">
+                        <label for="dob">Date of Birth <span>*</span></label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                </div>
+
+                <!-- Contact Row: Phone and Email -->
+                <div class="form-row">
+                    <div class="form-col">
+                        <label for="phone">Phone Number <span>*</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="03XXXXXXXXX" required>
+                    </div>
+                    <div class="form-col">
+                        <label for="email">Email Address <span>*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <!-- Class + Program Selection -->
+                <div class="form-row">
+                    <div class="form-col">
+                        <label for="class">Select Class <span>*</span></label>
+                        <select id="class" name="class" required>
+                            <option value="">Select Class</option>
+                            <option>Play Group</option>
+                            <option>KG-I</option>
+                            <option>Grade-I</option>
+                            <option>Grade-II</option>
+                            <option>Grade-III</option>
+                            <option>Grade-IV</option>
+                            <option>Grade-V</option>
+                            <option>Grade-VI</option>
+                            <option>Grade-VII</option>
+                            <option>Grade-VIII</option>
+                            <option>Grade-IX</option>
+                            <option>Grade-X</option>
+                        </select>
+                    </div>
+                    <div class="form-col">
+                        <label for="programme">Program <span>*</span></label>
+                        <select id="programme" name="programme" required>
+                            <option value="">Select Program</option>
+                            <option>General</option>
+                            <option>Science</option>
+                            <option>Arts</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Gender + Nationality Radio Buttons -->
+                <div class="form-row">
+                    <div class="form-col">
+                        <label>Gender <span>*</span></label>
+                        <div class="form-col-radio">
+                            <input type="radio" id="male" name="gender" value="Male" required>
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="Female">
+                            <label for="female">Female</label>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <label>Nationality <span>*</span></label>
+                        <div class="form-col-radio">
+                            <input type="radio" id="pakistani" name="nationality" value="Pakistani" required>
+                            <label for="pakistani">Pakistani</label>
+                            <input type="radio" id="other_nationality" name="nationality" value="Other">
+                            <label for="other_nationality">Other</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- File Upload for Student Photo -->
+                <div class="form-row">
+                    <div class="form-col">
+                        <label for="picture">Upload Photo <span>*</span></label>
+                        <input type="file" id="picture" name="picture" accept="image/png, image/jpeg" required>
+                    </div>
+                </div>
+
+                <!-- Terms and Conditions Checkbox -->
+                <div class="form-row">
+                    <div class="form-col-checkbox">
+                        <input type="checkbox" id="agree" name="agree" required>
+                        <label for="agree">I agree to the terms and conditions of Lahore Grammar School.</label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit Application</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- 
+        FOOTER 
+    -->
+    <footer>
+        <p>&copy; 2025 Lahore Grammar School. All Rights Reserved.</p>
+        <p>Designed by: 1st Semester Students of UET Lahore CS Department</p>
+    </footer>
+</body>
+</html>

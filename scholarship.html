@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Scholarships | Lahore Grammar School</title>
+    
+    <!-- Linking the external CSS file for the Scholarship page -->
+    <link rel="stylesheet" href="scholarship-style.css">
+</head>
+<body>
+    <!-- 
+        NAVIGATION BAR 
+    -->
+    <nav>
+        <div class="logo">
+            <img src="lgs-blue.jpg" alt="LGS Logo">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="admission.html">Admission</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="scholarship.html">Scholarship</a></li>
+            <li><a href="photogallery.html">Photo Gallery</a></li>
+        </ul>
+    </nav>
+
+    <!-- 
+        HERO SECTION 
+    -->
+    <section class="scholarship-hero">
+        <div class="overlay">
+            <h1>Scholarship Opportunities</h1>
+            <p>Empowering bright minds with financial support to achieve academic excellence.</p>
+            <a href="#apply" class="btn">Apply Now</a>
+        </div>
+    </section>
+
+    <!-- 
+        SCHOLARSHIP DETAILS SECTION 
+        Displays different types of scholarships available.
+    -->
+    <main>
+        <section class="details">
+            <h2>Available Scholarships</h2>
+            <div class="cards">
+                <!-- Merit-Based Card -->
+                <div class="card">
+                    <h3>Merit-Based Scholarship</h3>
+                    <p>Awarded to students with outstanding academic performance and consistent excellence.</p>
+                </div>
+                <!-- Need-Based Card -->
+                <div class="card">
+                    <h3>Need-Based Scholarship</h3>
+                    <p>Supporting talented students from families facing financial challenges.</p>
+                </div>
+                <!-- Sports Card -->
+                <div class="card">
+                    <h3>Sports Scholarship</h3>
+                    <p>For students excelling in athletics and representing the school at various levels.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+            APPLICATION SECTION 
+            A form for students to apply for a scholarship.
+        -->
+        <section id="apply" class="apply">
+            <h2>Apply for Scholarship</h2>
+            <form action="#" method="POST">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="scholarship">Select Scholarship Type</label>
+                <select id="scholarship" name="scholarship" required>
+                    <option value="">-- Choose --</option>
+                    <option value="merit">Merit-Based</option>
+                    <option value="need">Need-Based</option>
+                    <option value="sports">Sports</option>
+                </select>
+
+                <label for="message">Why should you be selected?</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Tell us about your achievements and goals..."></textarea>
+
+                <button type="submit" class="btn">Submit Application</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- 
+        FOOTER 
+    -->
+    <footer>
+        <p>&copy; 2025 Lahore Grammar School. All Rights Reserved.</p>
+        <p>Designed by: 1st Semester Students of UET Lahore CS Department</p>
+    </footer>
+</body>
+</html>

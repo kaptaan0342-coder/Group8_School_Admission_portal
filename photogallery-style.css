@@ -1,0 +1,180 @@
+/* 
+   GENERAL RESET 
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #384959;
+    line-height: 1.6;
+}
+
+/* 
+   NAVIGATION BAR STYLING 
+*/
+nav {
+    background: #004080;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav img {
+    height: 60px;
+    object-fit: contain;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* 
+   HERO SECTION STYLING 
+*/
+.gallery-hero {
+    height: 400px;
+    background: url("lgs2.jpg") center/cover no-repeat;
+    position: relative;
+}
+
+.gallery-hero .overlay {
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.gallery-hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease;
+}
+
+.gallery-hero p {
+    font-size: 20px;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease;
+}
+
+/* 
+   GALLERY GRID STYLING 
+   Using CSS Grid to create a responsive-like layout that stays consistent.
+*/
+.gallery-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Fixed 3 columns for desktop feel */
+    gap: 30px;
+}
+
+.gallery-item {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay that appears on hover for each gallery item */
+.item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 64, 128, 0.9));
+    color: white;
+    padding: 20px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.gallery-item:hover .item-overlay {
+    opacity: 1;
+}
+
+.item-overlay h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* 
+   FOOTER STYLING 
+*/
+footer {
+    background-color: #004080;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* 
+   ANIMATIONS 
+*/
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 
+   MOBILE RESPONSIVE CODE REMOVED 
+*/
